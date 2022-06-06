@@ -45,8 +45,7 @@ public class Main {
         String text = "Безумие - это точное повторение одного и того же действия раз за разом, в надежде на изменение. Это и есть безумие.";
         List<String> stringList = Arrays.asList(text.toLowerCase().split("[\s,.-]+"));
         Set<String> uniqueWord = new LinkedHashSet<>(stringList);
-        for (String word : uniqueWord) {
-            System.out.println(word + " " + Collections.frequency(stringList,word));
-        }
+
+            System.out.println(stringList.size() - uniqueWord.size());
     }
 }
