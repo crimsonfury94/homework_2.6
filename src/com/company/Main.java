@@ -9,8 +9,8 @@ public class Main {
         System.out.println("[Задание 1]");
 
         List<Integer> nums = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
-        for (Integer i : nums) {
-            if (i % 2 == 1) {
+        for (int i : nums) {
+            if (i % 2 != 0) {
                 System.out.print(i + " ");
             }
         }
@@ -19,7 +19,7 @@ public class Main {
 
         List<Integer> numsList = new ArrayList<>(List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7));
         Set<Integer> numsSet = new HashSet<>(numsList);
-        for (Integer i : numsSet) {
+        for (int i : numsSet) {
             if (i % 2 == 0) {
                 Collections.sort(numsList);
                 System.out.print(i + " ");
@@ -44,8 +44,7 @@ public class Main {
 
         String text = "Безумие - это точное повторение одного и того же действия раз за разом, в надежде на изменение. Это и есть безумие.";
         List<String> stringList = Arrays.asList(text.toLowerCase().split("[\s,.-]+"));
-        Set<String> uniqueWord = new LinkedHashSet<>(stringList);
-
+        Set<String> uniqueWord = new HashSet<>(stringList);
             System.out.println(stringList.size() - uniqueWord.size());
     }
 }
